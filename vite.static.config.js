@@ -14,7 +14,8 @@ export default defineConfig({
         index: resolve(root, 'index.html'),
         'aviso-legal': resolve(root, 'aviso-legal.html'),
         'politica-privacidad': resolve(root, 'politica-privacidad.html'),
-        'politica-cookies': resolve(root, 'politica-cookies.html')
+        'politica-cookies': resolve(root, 'politica-cookies.html'),
+        'panel-demo': resolve(root, 'panel-demo.html')
       }
     }
   },
