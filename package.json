@@ -1,0 +1,26 @@
+{
+  "name": "patricia-lobo-fisioterapia-oviedo",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "node scripts/prepare-public.mjs && vinext build && node scripts/finalize-hosting-build.mjs",
+    "build:static": "vite build --config vite.static.config.js",
+    "preview": "vinext start",
+    "check": "node scripts/check-site.mjs"
+  },
+  "dependencies": {
+    "@cloudflare/vite-plugin": "^1.44.0",
+    "@vinext/cloudflare": "^1.0.0-beta.1",
+    "react": "^19.2.6",
+    "react-dom": "^19.2.6",
+    "react-server-dom-webpack": "^19.2.6",
+    "vinext": "1.0.0-beta.1"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^6.0.1",
+    "@vitejs/plugin-rsc": "^0.5.27",
+    "vite": "^8.0.0"
+  }
+}
