@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Panel de actividad | Patricia Lobo Granado</title>
+  <meta name="description" content="Demostración privada del panel de actividad de la web de Patricia Lobo Granado.">
+  <meta name="robots" content="noindex,nofollow,noarchive">
+  <meta name="theme-color" content="#0d2b64">
+  <link rel="icon" type="image/png" href="assets/images/favicon-64.png">
+  <link rel="stylesheet" href="assets/css/admin.css?v=20260713-1">
+</head>
+<body>
+  <a class="skip" href="#panel-content">Saltar al contenido</a>
+  <header class="admin-header">
+    <a class="admin-brand" href="index.html" aria-label="Volver a la web de Patricia Lobo Granado">
+      <svg aria-hidden="true" viewBox="0 0 48 52"><circle cx="14" cy="6" r="2.6"/><circle cx="34" cy="6" r="2.6"/><path d="M14 12c0 9 4.5 16 10 21 5.5 5 10 11 10 17M34 12c0 9-4.5 16-10 21-5.5 5-10 11-10 17"/></svg>
+      <span><strong>Patricia Lobo Granado</strong><small>Panel de actividad</small></span>
+    </a>
+    <a class="view-site" href="index.html">Ver la web</a>
+  </header>
+
+  <main class="dashboard" id="panel-content">
+    <section class="intro" aria-labelledby="dashboard-title">
+      <div>
+        <div class="demo-label"><span></span> Vista de demostración</div>
+        <h1 id="dashboard-title">Resumen de la página</h1>
+        <p>Comprueba de un vistazo cómo encuentran la web y cuántas personas solicitan información.</p>
+      </div>
+      <div class="period-control">
+        <label for="period">Periodo</label>
+        <select id="period">
+          <option value="7">Últimos 7 días</option>
+          <option value="30" selected>Últimos 30 días</option>
+          <option value="90">Últimos 90 días</option>
+        </select>
+      </div>
+    </section>
+
+    <div class="demo-notice" role="status">
+      <strong>Datos de ejemplo.</strong> Los valores sirven para probar el panel; empezarán a ser reales cuando se conecte la analítica.
+    </div>
+
+    <section class="kpi-grid" aria-label="Indicadores principales">
+      <article class="kpi"><span>Visitas</span><strong data-kpi="visits">1.284</strong><small data-trend="visits">↑ 18 % respecto al periodo anterior</small></article>
+      <article class="kpi"><span>Personas</span><strong data-kpi="people">936</strong><small>Visitantes aproximados sin identificar</small></article>
+      <article class="kpi"><span>Contactos</span><strong data-kpi="contacts">127</strong><small data-trend="contacts">103 WhatsApp · 24 llamadas</small></article>
+      <article class="kpi highlight"><span>Conversión</span><strong data-kpi="conversion">9,9 %</strong><small>De cada 100 visitas, unas 10 contactan</small></article>
+    </section>
+
+    <section class="main-grid">
+      <article class="card traffic-card">
+        <div class="card-heading"><div><span class="eyebrow">Evolución</span><h2>Visitas y contactos</h2></div><div class="legend"><span><i class="navy"></i>Visitas</span><span><i class="teal"></i>Contactos</span></div></div>
+        <div class="chart-wrap"><svg id="activity-chart" role="img" aria-label="Evolución de visitas y contactos" viewBox="0 0 720 260" preserveAspectRatio="none"></svg></div>
+        <div class="chart-labels" id="chart-labels" aria-hidden="true"></div>
+      </article>
+
+      <article class="card contacts-card">
+        <div class="card-heading"><div><span class="eyebrow">Acciones</span><h2>Cómo contactan</h2></div></div>
+        <div class="contact-total"><strong data-kpi="contacts">127</strong><span>contactos en total</span></div>
+        <div class="bar-row"><div><span>WhatsApp</span><strong data-action="whatsapp">103</strong></div><div class="bar"><i class="whatsapp" data-bar="whatsapp"></i></div></div>
+        <div class="bar-row"><div><span>Llamadas</span><strong data-action="phone">24</strong></div><div class="bar"><i class="phone" data-bar="phone"></i></div></div>
+        <p class="plain-help">La conversión contabiliza los clics para contactar, no el contenido de las conversaciones.</p>
+      </article>
+    </section>
+
+    <section class="detail-grid">
+      <article class="card">
+        <div class="card-heading"><div><span class="eyebrow">Adquisición</span><h2>De dónde llegan</h2></div></div>
+        <div class="source-list" id="source-list"></div>
+      </article>
+
+      <article class="card">
+        <div class="card-heading"><div><span class="eyebrow">Tecnología</span><h2>Dispositivos</h2></div></div>
+        <div class="donut-layout"><div class="donut" id="device-donut"><span data-device-total>936</span><small>personas</small></div><div class="device-list" id="device-list"></div></div>
+      </article>
+
+      <article class="card">
+        <div class="card-heading"><div><span class="eyebrow">Interés</span><h2>Tarifas consultadas</h2></div></div>
+        <div class="rank-list" id="tariff-list"></div>
+      </article>
+    </section>
+
+    <section class="bottom-grid">
+      <article class="card">
+        <div class="card-heading"><div><span class="eyebrow">Actividad</span><h2>Momentos con más visitas</h2></div></div>
+        <div class="peak-grid"><div><span>Mejor día</span><strong data-peak="day">Martes</strong><small data-peak="dayDetail">19 % de las visitas</small></div><div><span>Mejor hora</span><strong data-peak="hour">19:00–21:00</strong><small>Horario más activo</small></div></div>
+      </article>
+      <article class="card explanation">
+        <div><span class="eyebrow">Ayuda</span><h2>¿Qué conviene observar?</h2><p>Las visitas indican alcance. Los contactos muestran intención real. Si la conversión sube, la página está funcionando mejor aunque el tráfico no cambie.</p></div>
+        <button class="export-button" id="export-csv" type="button">Exportar resumen CSV</button>
+      </article>
+    </section>
+
+    <footer class="admin-footer"><p>Panel privado de Patricia Lobo Granado</p><p>Sin información clínica ni datos identificativos de pacientes</p></footer>
+  </main>
+  <script type="module" src="assets/js/admin.js"></script>
+</body>
+</html>
