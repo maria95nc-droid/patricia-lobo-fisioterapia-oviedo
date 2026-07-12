@@ -2,13 +2,15 @@ import indexHtml from '../../index.html?raw';
 import legalHtml from '../../aviso-legal.html?raw';
 import privacyHtml from '../../politica-privacidad.html?raw';
 import cookiesHtml from '../../politica-cookies.html?raw';
+import panelDemoHtml from '../../panel-demo.html?raw';
 
 const pages = new Map([
   ['/', indexHtml],
   ['/index.html', indexHtml],
   ['/aviso-legal.html', legalHtml],
   ['/politica-privacidad.html', privacyHtml],
-  ['/politica-cookies.html', cookiesHtml]
+  ['/politica-cookies.html', cookiesHtml],
+  ['/panel-demo.html', panelDemoHtml]
 ]);
 
 export function GET(request) {
